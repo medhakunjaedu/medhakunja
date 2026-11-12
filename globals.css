@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root { --navy:#1E3A8A; --gold:#D97706; }
+body { background:#F8FAFC; }
+::-webkit-scrollbar { width:8px; height:8px; }
+::-webkit-scrollbar-thumb { background:#CBD5E1; border-radius:99px; }
+
+@media print {
+  body * { visibility:hidden !important; }
+  #print-root, #print-root * { visibility:visible !important; }
+  #print-root { position:absolute !important; left:0; top:0; width:100% !important; margin:0 !important; padding:0 !important; }
+  .no-print { display:none !important; }
+  @page { size:A4; margin:6mm; }
+}
+.receipt-half { height: 132mm; overflow:hidden; }
+.admit-box { width: 180mm; }
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance:none; }
